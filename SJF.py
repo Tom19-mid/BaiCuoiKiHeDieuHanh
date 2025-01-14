@@ -64,7 +64,12 @@ schedule = sjf_scheduling(processes)
 
 # In kết quả
 print("SJF Scheduling:")
-print(f"{'Process ID':<12}{'Arrival Time':<15}{'Burst Time':<12}{'Completion Time':<18}{'Turnaround Time':<18}{'Waiting Time':<12}")
+print("Input")
+print(f"{'Process ID':<12}{'Arrival Time':<15}{'Burst Time':<12}")
 for entry in schedule:
-    print(f"{entry['Process ID']:<12}{entry['Arrival Time']:<15}{entry['Burst Time']:<12}{entry['Completion Time']:<18}{entry['Turnaround Time']
-                                                                                                                        :<18}{entry['Waiting Time']:<12}")
+    print(f"{entry['Process ID']:<12}{entry['Arrival Time']:<15}{entry['Burst Time']:<12}")
+print(" ")
+print("Outptut")
+print(f"{'Completion Time':<18}{'Turnaround Time':<18}{'Waiting Time':<12}")
+for entry in schedule:
+    print(f"{entry['Completion Time']:<18}{entry['Turnaround Time']:<18}{entry['Waiting Time']:<12}")
